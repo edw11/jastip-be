@@ -162,7 +162,7 @@ app.post("/logout", (req, res) => {
     res.clearCookie("token", {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "None",
     });
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
@@ -188,7 +188,7 @@ function createCookie(res, user) {
   res.cookie("token", accessToken, {
     httpOnly: true,
     secure: true,
-    sameSite: "Strict",
+    sameSite: "None",
     maxAge: 3600000,
   });
 }
