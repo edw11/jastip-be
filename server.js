@@ -147,7 +147,7 @@ app.post("/create", authenticateUser, async (req, res) => {
 // });
 
 //get-post
-app.get("/post", authenticateUser, async (req, res) => {
+app.get("/post", async (req, res) => {
   try {
     const data = await Post.find({});
     res.status(200).json(data);
