@@ -19,7 +19,7 @@ app.use(cookieParser()); // ⬅ Middleware to parse cookies
 // Allow credentials and restrict CORS to specific origin
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only Next.js frontend
+    origin: "https://jastip-fe-nu.vercel.app", // Allow only Next.js frontend
     credentials: true, // Allow cookies
   })
 );
