@@ -194,8 +194,8 @@ function createCookie(res, user) {
 }
 //authenticateUser
 async function authenticateUser(req, res, next) {
+  console.log("Cookies received:", req.cookies); // Debugging line
   const token = req.cookies.token;
-  console.log("token");
 
   if (!token) {
     return res.status(401).json({ message: "Unauthorized: No token provided" });
